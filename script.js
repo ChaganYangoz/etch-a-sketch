@@ -1,5 +1,7 @@
 const container = document.getElementById("container");
 
+const btn=document.querySelector('#reset');
+
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);

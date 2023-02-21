@@ -1,21 +1,22 @@
-body{
-    margin: auto;
-}
-
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
   }
   
   #container {
-    display: grid;
-    grid-gap: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-columns: repeat(var(--grid-cols),1fr);
   }
   
+  .grid-item:hover{
+    background-color: black;
+  }
+
   .grid-item {
-    padding: 1em;
+    padding: 50px;
     border: 1px solid #ddd;
     text-align: center;
   }
