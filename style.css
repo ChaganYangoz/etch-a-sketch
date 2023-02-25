@@ -14,7 +14,7 @@ body {
   margin-bottom: 50px;
   margin-left: 30px;
   margin-right: 30px;
-  display: flex;
+  display: grid;
   justify-content: center;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -38,10 +38,11 @@ img {
   height: auto;
 }
 
-button{
+#reset{
   margin-top: 20px;
   align-self: center;
-  max-width: 100px;
+  max-width: 120px;
+  height: 40px;
   background-color: #FFB84C;
 }
 
