@@ -11,14 +11,10 @@ body {
 
 #container {
   margin: 25px;
+  width: 700px;
+  height: 700px;
   display: grid;
   justify-content: center;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
-}
-
-.grid-item:hover {
-  background-color: black;
 }
 
 .grid-item {
