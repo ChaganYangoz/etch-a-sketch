@@ -31,6 +31,7 @@ img {
 }
 
 #container-back{
+  align-items: center;
   margin:auto;
   background-color:#F16767;
 }
@@ -69,14 +70,18 @@ button:not([disabled]):hover {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
-.slidecontainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #btns{
   display: flex;
   flex-direction: row;
   gap: 5px;
+}
+
+.toolbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sketch{
+  display: flex;
 }

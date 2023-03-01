@@ -7,23 +7,25 @@
 </head>
 
 <body>
+   
     <img src="img/Logo.png" alt="logo">
+    <div class="sketch"></div>
+    <div class="toolbar">
+        <input type="color" id="colorpicker" value="#000000">
+        <button id="rainbow">Rainbow Mode</button>
+        <button id="eraser">Eraser</button>
+        <p><span id="demo"></span></p>
+        <input type="range" min="1" max="40" value="16" class="slider" id="myRange" onchange="resize(this.value)">
+        <div id="btns">
+            <button id="reset">Clear All</button>
+        </div>
+    </div>
 
-    <input type="color" id="colorpicker" value="#000000">
-    <button id="rainbow">Rainbow Mode</button>
-    <button id="eraser">Eraser</button>
     <div id="container-back">
         <div id="container"></div>
     </div>
+</div>
 
-    <div class="slidecontainer">
-        <p><span id="demo"></span></p>
-        <input type="range" min="1" max="50" value="16" class="slider" id="myRange">
-        <div id="btns">
-            <button id="apply">Apply</button>
-            <button id="reset">Reset</button>
-        </div>
-    </div>
     <script src="script.js"></script>
 </body>
 

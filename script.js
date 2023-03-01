@@ -2,7 +2,6 @@ let count=0;
 let currentMode="colorMode";
 const container = document.getElementById("container");
 const btn = document.querySelector('#reset');
-const apply=document.querySelector('#apply');
 const colorChoice=document.querySelector('#colorpicker');
 const eraser=document.querySelector('#eraser');
 const rainbow=document.querySelector('#rainbow');
@@ -26,7 +25,11 @@ function makeRows(rows, cols) {
   container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
 };
 
-btn.onclick = () => document.location.reload();
+btn.onclick = () =>{
+  deleteRows(count);
+  count=0;
+  makeRows(pixel,pixel);
+}
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.style.fontSize="20px";
@@ -36,11 +39,6 @@ let pixel=slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value+"x"+this.value;
   pixel = this.value;
-}
- apply.onclick=()=> {
-  deleteRows(count);
-  count=0;
-  makeRows(pixel, pixel);
 }
 
 function deleteRows(count){
@@ -66,6 +64,12 @@ function changeColor(e){
   }else if(currentMode=="eraser"){
     e.target.style.backgroundColor="white";
   }
+}
+
+function resize(size){
+  deleteRows(count);
+  count=0;
+  makeRows(size, size);
 }
 
 makeRows(pixel, pixel);
